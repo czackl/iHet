@@ -42,10 +42,10 @@ plot_celltype(deconv, cell_type = "quantiseq", density = F, smooth = T, title_si
 
 ```{r decoupleR, fig.width=15, fig.height=10, collapse=TRUE}
 ref <- get_decoupleR_reference("progeny")
-deconv <- compute_decoupleR_activities(deconv, ref, method = "wmean", assay = "cpm")
+deconv <- compute_activities(deconv, ref, method = "wmean", assay = "cpm")
 
 ref <- get_decoupleR_reference("collectri")
-deconv <- compute_decoupleR_activities(deconv, ref, method = "wmean", assay = "cpm")
+deconv <- compute_activities(deconv, ref, method = "wmean", assay = "cpm")
 
 plot_celltype(deconv, cell_type = "progeny", density = F, smooth = T, title_size = 15)
 
